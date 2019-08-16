@@ -4,7 +4,7 @@ import (
   "net/http"
   "strconv"
 
-  "mvc/models"
+  "alta-last/models"
   "github.com/labstack/echo"
   "crypto/md5"
   "fmt"

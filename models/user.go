@@ -1,7 +1,7 @@
 package models
 
 import (
-  "mvc/config"
+  "alta-last/config"
   "github.com/jinzhu/gorm"
 )
 
