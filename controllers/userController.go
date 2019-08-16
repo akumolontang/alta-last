@@ -6,8 +6,8 @@ import (
 
   "alta-last/models"
   "github.com/labstack/echo"
-  "crypto/md5"
-  "fmt"
+  // "crypto/md5"
+  // "fmt"
 )
 
 // get all users
@@ -35,7 +35,7 @@ func GetUserController(c echo.Context) error {
 func CreateUserController(c echo.Context) error {
   user := models.User{}
   c.Bind(&user)
-  user.Password = ToMD5(user.Password)
+  // user.Password = ToMD5(user.Password)
 
   result, err := models.CreateUser(&user)
   if err != nil {
