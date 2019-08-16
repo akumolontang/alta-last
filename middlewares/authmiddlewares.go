@@ -6,7 +6,7 @@ import (
 	// "alta-last/controllers"
   )
 
-func BasicAuth(username, password string, c echo.Context) (bool, error) {
+func BasicAuth(username string, password string, c echo.Context) (bool, error) {
 	if username == "admin" && password == "admin" {
 	  return true, nil
 	}

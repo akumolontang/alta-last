@@ -5,14 +5,14 @@ import (
   "alta-last/models"
   "alta-last/routes"
 
-//   m "alta-last/middlewares"
+   m "alta-last/middlewares"
 )
 
 func main() {
   e := routes.New()
 
   // implement middleware
-  //   m.LogMiddlewares(e)
+    m.LogMiddlewares(e)
   // migration database
   
   InitialMigration()
