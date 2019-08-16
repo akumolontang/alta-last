@@ -1,7 +1,7 @@
 package routes
 
 import (
-  c "mvc/controllers"
+  c "alta-last/controllers"
 //   auth "mvc/middlewares"
 //   m "github.com/labstack/echo/middleware"
   "github.com/labstack/echo"

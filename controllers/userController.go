@@ -4,7 +4,7 @@ import (
   "net/http"
   "strconv"
 
-  "mvc/models"
+  "alta-last/models"
   "github.com/labstack/echo"
   "crypto/md5"
   "fmt"
@@ -76,6 +76,17 @@ func UpdateUserController(c echo.Context) error {
 	})
 }
 
-func ToMD5(s string) string {
-  return fmt.Sprintf("%x", md5.Sum([]byte(s)))
+
+// get all users
+func GetweatherController(c echo.Context) error {
+  users, err := models.GetUsers()
+  if err != nil {
+    return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+  }
+  return c.JSON(http.StatusOK, users)
 }
+
+
+// func ToMD5(s string) string {
+//   return fmt.Sprintf("%x", md5.Sum([]byte(s)))
+// }
