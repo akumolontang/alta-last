@@ -2,7 +2,7 @@ package routes
 
 import (
   c "alta-last/controllers"
-//   auth "mvc/middlewares"
+//   auth "alta-last/middlewares"
 //   m "github.com/labstack/echo/middleware"
   "github.com/labstack/echo"
 )
@@ -16,7 +16,7 @@ func New() *echo.Echo {
   e.POST("/api/users", c.CreateUserController)
   e.DELETE("/api/users/:id", c.DeleteUserController)
   e.PUT("/api/users/:id", c.UpdateUserController)
-
+  e.GET("api/weather/:city", c.GetWeatherController)
   return e
 }
 
