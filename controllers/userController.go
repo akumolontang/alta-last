@@ -31,6 +31,7 @@ func GetUserController(c echo.Context) error {
   return c.JSON(http.StatusOK, user)
 }
 
+
 // create new user
 func CreateUserController(c echo.Context) error {
   user := models.User{}
@@ -43,6 +44,7 @@ func CreateUserController(c echo.Context) error {
   }
   return c.JSON(http.StatusCreated, result)
 }
+
 
 // remove user by id
 func DeleteUserController(c echo.Context) error {
